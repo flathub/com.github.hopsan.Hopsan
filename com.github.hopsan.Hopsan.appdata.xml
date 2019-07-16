@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2019 Peter Nordin -->
 <component type="desktop-application">
   <id>com.github.hopsan.Hopsan</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>Apache-2.0 AND GPL-3.0</project_license>
   <name>Hopsan</name>
   <summary>A modelling and simulation tool for fluid power and mechatronic systems</summary>
-
   <description>
     <p>
     Hopsan is a modelling and simulation environment for fluid and mechatronic systems. It was originally developed for simulation of fluid power systems, but has also been extended with support for other domains such as electric power, mechanics, flight and vehicle dynamics.
@@ -14,26 +14,40 @@
     Hopsan uses bi-directional delay lines, (or transmission line elements TLM) to connect physical component models, but also supports signal flow modelling with common mathematical operators and functions.
     </p>
   </description>
-
-  <content_rating type="oars-1.0" />
-
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://github.com/Hopsan/screenshots/raw/master/Screenshot_Hopsan_Workspace_w1600.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://github.com/Hopsan/screenshots/raw/master/Screenshot_Hopsan_PlotAnalysis_w1600.png</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://github.com/Hopsan/screenshots/raw/master/Screenshot_Hopsan_CodeEditor_w1600.png</image>
+    </screenshot>
+  </screenshots>
+  <content_rating type="oars-1.0"/>
+  <translation/>
   <launchable type="desktop-id">com.github.hopsan.Hopsan.desktop</launchable>
-
   <url type="homepage">https://liu.se/en/research/hopsan</url>
   <url type="bugtracker">https://github.com/Hopsan/hopsan/issues</url>
   <url type="help">https://flumes.iei.liu.se/hopsan/docs/latest/html</url>
+
+  <!--FIXME: where to donate to the application-->
+  <url type="donation"/>
+
+  <!--FIXME: where to submit translations-->
+  <url type="translate"/>
   <update_contact>https://github.com/Hopsan/hopsan/issues</update_contact>
   <developer_name>Robert Braun and Peter Nordin</developer_name>
-
   <releases>
-    <release version="2.12.0" date="2019-07-15">
+    <release date="2019-07-15" version="2.12.0">
       <description>
-        <p>See Hopsan-release-notes.txt for details.</p>
+        <p>See Hopsan-release-notes.txt for the full changelog.</p>
       </description>
-    </release>/
-    <release version="2.11.5" date="2019-04-30">
+    </release>
+    <release date="2019-04-30" version="2.11.5">
       <description>
-        <p>See Hopsan-release-notes.txt for details.</p>
+        <p>See Hopsan-release-notes.txt for the full changelog.</p>
       </description>
     </release>
   </releases>

@@ -78,9 +78,16 @@ sed "s|HOPSAN_BASE_VERSION|${baseversion}|" -i ${manifest}
 sed "s|HOPSAN_RELEASE_REVISION|${releaserevision}|" -i ${manifest}
 sed "s|HOPSAN_DEVELOPMENT_RELEASE|${doDevRelease}|" -i ${manifest}
 
-releasetag="\ \ \ \ <release version=\"${baseversion}\" date=\"$releasedate\">\n      <description>\n        <p>See Hopsan-release-notes.txt for details.</p>\n      </description>\n    </release>"
-sed "/<releases>/a ${releasetag}/" -i ${appdata}
+grep ${baseversion} ${appdata} 2>&1 > /dev/null
+if [[ $? -eq 1 ]]; then
+  releasetag="\ \ \ \ <release version=\"${baseversion}\" date=\"$releasedate\">\n      <description>\n        <p>See Hopsan-release-notes.txt for the full changelog.</p>\n      </description>\n    </release>"
+  sed "/<releases>/a ${releasetag}/" -i ${appdata}
+else
+  echo Info: ${baseversion} is already in ${appdata} not adding it again
+fi
 
+appstream-util upgrade ${appdata}
+appstream-util validate ${appdata}
 
 echo Done preparing ${manifest} and ${appdata}
 echo
