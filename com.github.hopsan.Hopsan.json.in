@@ -59,8 +59,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Hopsan/hopsan.git",
-                    "tag": "v2.11.5-flatpak",
-                    "commit": "0ac99dc8fa92dce2eb2dfaf87eff20c6bd8ecab0"
+                    "tag": "v2.12.0",
+                    "commit": "f14141dfb88073afeab275743bf55c8652d323ba"
                 },
                 {
                     "type": "file",

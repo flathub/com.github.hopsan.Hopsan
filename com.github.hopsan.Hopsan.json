@@ -36,7 +36,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 /* Configure source code with version numbers and build settings */
-                "./buildDebPackage/prepareSourceCode.sh $(pwd) $(pwd) 2.11.5 20190430.2145 2.11.5.20190430.2145 false false",
+                "./buildDebPackage/prepareSourceCode.sh $(pwd) $(pwd) 2.12.0 20190716.0004 2.12.0.20190716.0004 false false",
                 /* Since Hopsan already has built-in dependency module build scripts we reuse them instead of duplicating the work with flatpak modules */
                 "cd Dependencies; ./setupDiscount.sh",
                 "cd Dependencies; ./setupFMILibrary.sh",
@@ -59,8 +59,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Hopsan/hopsan.git",
-                    "tag": "v2.11.5-flatpak",
-                    "commit": "0ac99dc8fa92dce2eb2dfaf87eff20c6bd8ecab0"
+                    "tag": "v2.12.0",
+                    "commit": "f14141dfb88073afeab275743bf55c8652d323ba"
                 },
                 {
                     "type": "file",
