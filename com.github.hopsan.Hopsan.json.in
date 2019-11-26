@@ -36,7 +36,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 /* Configure source code with version numbers and build settings */
-                "./buildDebPackage/prepareSourceCode.sh $(pwd) $(pwd) HOPSAN_BASE_VERSION HOPSAN_RELEASE_REVISION HOPSAN_FULL_RELEASE_VERSION HOPSAN_DEVELOPMENT_RELEASE false",
+                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) HOPSAN_BASE_VERSION HOPSAN_RELEASE_REVISION HOPSAN_FULL_RELEASE_VERSION HOPSAN_DEVELOPMENT_RELEASE false",
                 /* Since Hopsan already has built-in dependency module build scripts we reuse them instead of duplicating the work with flatpak modules */
                 "cd Dependencies; ./setupDiscount.sh",
                 "cd Dependencies; ./setupFMILibrary.sh",
@@ -48,7 +48,7 @@
                 "qmake HopsanNG.pro",
                 "make -j$(nproc)",
                 /* Install Hopsan reusing deb packaging script */
-                "./buildDebPackage/copyInstallHopsan.sh $(pwd) /app"
+                "./packaging/copyInstallHopsan.sh $(pwd) /app"
             ],
             "post-install": [
                 "install -t /app/share/icons/hicolor/128x128/apps/ -Dm644 com.github.hopsan.Hopsan.png",
@@ -59,8 +59,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Hopsan/hopsan.git",
-                    "tag": "v2.12.0",
-                    "commit": "f14141dfb88073afeab275743bf55c8652d323ba"
+                    "tag": "v2.13.0",
+                    "commit": "b49baa1b9c80aae5b3874e7f4e0756014d20956e"
                 },
                 {
                     "type": "file",

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -e
 set -u
 
 # Ask yes/no question, returning true or false in the global variable boolYNQuestionAnswer
@@ -80,8 +79,8 @@ sed "s|HOPSAN_DEVELOPMENT_RELEASE|${doDevRelease}|" -i ${manifest}
 
 grep ${baseversion} ${appdata} 2>&1 > /dev/null
 if [[ $? -eq 1 ]]; then
-  releasetag="\ \ \ \ <release version=\"${baseversion}\" date=\"$releasedate\">\n      <description>\n        <p>See Hopsan-release-notes.txt for the full changelog.</p>\n      </description>\n    </release>"
-  sed "/<releases>/a ${releasetag}/" -i ${appdata}
+    releasetag="\ \ \ \ <release version=\"${baseversion}\" date=\"$releasedate\">\n      <description>\n        <p>See Hopsan-release-notes.txt for the full changelog.</p>\n      </description>\n    </release>"
+    sed "/<releases>/a ${releasetag}/" -i ${appdata}
 else
   echo Info: ${baseversion} is already in ${appdata} not adding it again
 fi
