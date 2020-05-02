@@ -21,7 +21,7 @@ boolAskYNQuestion()
 
 # Ask user for version input
 echo
-read -p 'Enter release base version number on the form a.b.c: ' baseversion
+read -p 'Enter release base version number on the form a.b.c  (tag without v): ' baseversion
 if [[ -z $baseversion ]]; then
     echo Error: Must give a base version
     exit 1
@@ -40,8 +40,17 @@ fi
 #$(./getGitInfo.sh date.time .)
 echo
 read -p 'Enter release revision: ' releaserevision
-if [[ -z $releasedate ]]; then
+if [[ -z $releaserevision ]]; then
     echo Error: Must give a release revision
+    exit 1
+fi
+
+# Ask user for git hash
+# TODO Get this information automatically from git
+echo
+read -p 'Enter release commit hash: ' commithash
+if [[ -z $commithash ]]; then
+    echo Error: Must give a commit hash
     exit 1
 fi
 
@@ -56,6 +65,7 @@ echo
 echo ---------------------------------------
 echo Build DEVELOPMENT release: $doDevRelease
 echo Release base version number: $baseversion
+echo Release commit hash: $commithash
 echo Release date: $releasedate
 echo Release revision number: $releaserevision
 echo Release full version string: $fullversionname
@@ -72,10 +82,11 @@ manifest=com.github.hopsan.Hopsan.json
 appdata=com.github.hopsan.Hopsan.appdata.xml
 
 cp -f ${manifest}.in ${manifest}
-sed "s|HOPSAN_FULL_RELEASE_VERSION|${fullversionname}|" -i ${manifest}
-sed "s|HOPSAN_BASE_VERSION|${baseversion}|" -i ${manifest}
-sed "s|HOPSAN_RELEASE_REVISION|${releaserevision}|" -i ${manifest}
-sed "s|HOPSAN_DEVELOPMENT_RELEASE|${doDevRelease}|" -i ${manifest}
+sed "s|HOPSAN_FULL_RELEASE_VERSION|${fullversionname}|g" -i ${manifest}
+sed "s|HOPSAN_BASE_VERSION|${baseversion}|g" -i ${manifest}
+sed "s|HOPSAN_COMMIT_HASH|${commithash}|g" -i ${manifest}
+sed "s|HOPSAN_RELEASE_REVISION|${releaserevision}|g" -i ${manifest}
+sed "s|HOPSAN_DEVELOPMENT_RELEASE|${doDevRelease}|g" -i ${manifest}
 
 grep ${baseversion} ${appdata} 2>&1 > /dev/null
 if [[ $? -eq 1 ]]; then

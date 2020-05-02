@@ -59,8 +59,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Hopsan/hopsan.git",
-                    "tag": "v2.13.0",
-                    "commit": "b49baa1b9c80aae5b3874e7f4e0756014d20956e"
+                    "tag": "vHOPSAN_BASE_VERSION",
+                    "commit": "HOPSAN_COMMIT_HASH"
                 },
                 {
                     "type": "file",
