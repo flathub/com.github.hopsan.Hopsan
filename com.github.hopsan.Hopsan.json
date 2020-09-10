@@ -35,21 +35,21 @@
             "disabled": false,
             "buildsystem": "simple",
             "build-commands": [
-                /* Configure source code with version numbers and build settings */
+
                 "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.15.0 20200910.1905 2.15.0.20200910.1905 false false",
-                /* Since Hopsan already has built-in dependency module build scripts we reuse them instead of duplicating the work with flatpak modules */
-                "cd Dependencies; ./setupDiscount.sh",
-                "cd Dependencies; ./setupFMILibrary.sh",
-                "cd Dependencies; ./setupHDF5.sh",
-                "cd Dependencies; ./setupKatex.sh",
-                "cd Dependencies; ./setupZeroMQ.sh",
-                "cd Dependencies; ./setupMsgpack.sh",
-                "cd Dependencies; ./setupTclap.sh",
-                "cd Dependencies; ./setupQwt.sh",
-                /* Build Hopsan */
+
+                "cd dependencies; ./setupDiscount.sh",
+                "cd dependencies; ./setupFMILibrary.sh",
+                "cd dependencies; ./setupHDF5.sh",
+                "cd dependencies; ./setupKatex.sh",
+                "cd dependencies; ./setupZeroMQ.sh",
+                "cd dependencies; ./setupMsgpack.sh",
+                "cd dependencies; ./setupTclap.sh",
+                "cd dependencies; ./setupQwt.sh",
+
                 "qmake HopsanNG.pro",
                 "make -j$(nproc)",
-                /* Install Hopsan reusing deb packaging script */
+
                 "./packaging/copyInstallHopsan.sh $(pwd) /app"
             ],
             "post-install": [
@@ -64,11 +64,20 @@
                     "tag": "v2.15.0",
                     "commit": "6f5f03672d65a1436aa3d5f4e3659fadc3432976"
                 },
+                {"url": "https://github.com/Orc/discount/archive/v2.2.6.tar.gz", "sha256": "0beb98a66a6e38ed125e2d0a161ff6b461f6a38538bb72498766f376c94a0ad3", "mirror-urls": [], "type": "file", "dest-filename": "dependencies/discount-v2.2.6.tar.gz"},
+                {"url": "https://github.com/modelon-community/fmi-library/archive/2.2.tar.gz", "sha256": "e254de026639c455b3289b351801cccdba71b9610a7c9f303e0783fafeee388e", "mirror-urls": [], "type": "file", "dest-filename": "dependencies/fmilibrary-2.2.tar.gz"},
+                {"url": "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.21/src/CMake-hdf5-1.8.21.tar.gz", "mirror-urls": [], "type": "file", "md5": "46f0bb9366a63f5e9342ab46c436b7fd", "dest-filename": "dependencies/CMake-hdf5-1.8.21.tar.gz"},
+                {"url": "https://github.com/KaTeX/KaTeX/releases/download/v0.12.0/katex.tar.gz", "sha256": "9fd44a2e93cb1abb819c258b35c725cba54e5123c8420799b6a40a6a76ccf89e", "mirror-urls": [], "type": "file", "dest-filename": "dependencies/katex.tar.gz"},
+                {"url": "https://github.com/msgpack/msgpack-c/releases/download/cpp-3.1.1/msgpack-3.1.1.tar.gz", "sha256": "8592d12e19ac3796889b8358bc8f78df9272e6aa7a9ea1834bafd68e4073549a", "mirror-urls": [], "type": "file", "dest-filename": "dependencies/msgpack-c-msgpack-3.1.1.tar.gz"},
+                {"url": "https://sourceforge.net/projects/qwt/files/qwt/6.1.4/qwt-6.1.4.tar.bz2", "mirror-urls": [], "type": "file", "dest-filename": "dependencies/qwt-6.1.4.tar.bz2", "sha1": "a1028cb0a33322920266fb183869023b8ed30394"},
+                {"url": "https://downloads.sourceforge.net/project/tclap/tclap-1.2.1.tar.gz", "mirror-urls": [], "type": "file", "dest-filename": "dependencies/tclap-1.2.1.tar.gz", "sha1": "4f124216dd6e6936f5af6372d921a6c51563f8fd"},
+                {"url": "https://github.com/zeromq/libzmq/archive/907ec2247556e11661eacf7aa494154576055eb2.zip", "sha256": "bd4ebed45ce4fadfa341f7730237de9cdada04aa1af0a72c0dcf7138ca2f20d6", "mirror-urls": [], "type": "file", "dest-filename": "dependencies/zeromq-907ec2247556e11661eacf7aa494154576055eb2.zip"},
+                {"url": "https://github.com/zeromq/cppzmq/archive/v4.6.0.tar.gz", "sha256": "e9203391a0b913576153a2ad22a2dc1479b1ec325beb6c46a3237c669aef5a52", "mirror-urls": [], "type": "file", "dest-filename": "dependencies/cppzmq-v4.6.0.tar.gz"},
                 {
                     "type": "file",
                     "path": "com.github.hopsan.Hopsan.png"
                 },
-                                {
+                {
                     "type": "file",
                     "path": "com.github.hopsan.Hopsan.desktop"
                 },
