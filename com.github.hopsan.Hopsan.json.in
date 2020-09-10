@@ -43,6 +43,8 @@
                 "cd Dependencies; ./setupHDF5.sh",
                 "cd Dependencies; ./setupKatex.sh",
                 "cd Dependencies; ./setupZeroMQ.sh",
+                "cd Dependencies; ./setupMsgpack.sh",
+                "cd Dependencies; ./setupTclap.sh",
                 "cd Dependencies; ./setupQwt.sh",
                 /* Build Hopsan */
                 "qmake HopsanNG.pro",
