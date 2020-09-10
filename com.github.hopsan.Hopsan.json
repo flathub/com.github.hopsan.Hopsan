@@ -24,8 +24,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/doxygen/doxygen/archive/Release_1_8_15.tar.gz",
-                    "sha256": "cc5492b3e2d1801ae823c88e0e7a38caee61a42303587e987142fe9b68a43078"
+                    "url": "https://github.com/doxygen/doxygen/archive/Release_1_8_20.tar.gz",
+                    "sha256": "e0db6979286fd7ccd3a99af9f97397f2bae50532e4ecb312aa18862f8401ddec"
                 }
             ],
             "cleanup": [ "*" ]
@@ -36,13 +36,15 @@
             "buildsystem": "simple",
             "build-commands": [
                 /* Configure source code with version numbers and build settings */
-                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.14.2 20200522.1852 2.14.2.20200522.1852 false false",
+                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.15.0 20200910.1905 2.15.0.20200910.1905 false false",
                 /* Since Hopsan already has built-in dependency module build scripts we reuse them instead of duplicating the work with flatpak modules */
                 "cd Dependencies; ./setupDiscount.sh",
                 "cd Dependencies; ./setupFMILibrary.sh",
                 "cd Dependencies; ./setupHDF5.sh",
                 "cd Dependencies; ./setupKatex.sh",
                 "cd Dependencies; ./setupZeroMQ.sh",
+                "cd Dependencies; ./setupMsgpack.sh",
+                "cd Dependencies; ./setupTclap.sh",
                 "cd Dependencies; ./setupQwt.sh",
                 /* Build Hopsan */
                 "qmake HopsanNG.pro",
@@ -59,8 +61,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Hopsan/hopsan.git",
-                    "tag": "v2.14.2",
-                    "commit": "9bc6a7f91f8ac0ebe149bde5d7f64dea0c647bca"
+                    "tag": "v2.15.0",
+                    "commit": "6f5f03672d65a1436aa3d5f4e3659fadc3432976"
                 },
                 {
                     "type": "file",
