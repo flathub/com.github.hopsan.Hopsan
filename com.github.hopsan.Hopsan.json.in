@@ -25,7 +25,7 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/doxygen/doxygen/archive/Release_1_8_20.tar.gz",
-                    "sha256": "e0db6979286fd7ccd3a99af9f97397f2bae50532e4ecb312aa18862f8401ddec"
+                    "sha256": "3dbdf8814d6e68233d5149239cb1f0b40b4e7b32eef2fd53de8828fedd7aca15"
                 }
             ],
             "cleanup": [ "*" ]
