@@ -35,7 +35,7 @@
             "disabled": false,
             "buildsystem": "simple",
             "build-commands": [
-                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.16.0 20200910.2104 2.16.0.20200910.2104 false false",
+                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.16.0 20201108.1336 2.16.0.20201108.1336 false false",
 
                 "cd dependencies; ./setupDiscount.sh",
                 "cd dependencies; ./setupFMILibrary.sh",
