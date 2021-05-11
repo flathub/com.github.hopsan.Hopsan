@@ -40,6 +40,11 @@
   <update_contact>https://github.com/Hopsan/hopsan/issues</update_contact>
   <developer_name>Robert Braun and Peter Nordin</developer_name>
   <releases>
+    <release date="2021-05-11" version="2.19.0">
+      <description>
+        <p>See Hopsan-release-notes.txt for the full changelog.</p>
+      </description>
+    </release>
     <release date="2021-02-25" version="2.18.0">
       <description>
         <p>See Hopsan-release-notes.txt for the full changelog.</p>

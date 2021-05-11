@@ -88,7 +88,7 @@ sed "s|HOPSAN_COMMIT_HASH|${commithash}|g" -i ${manifest}
 sed "s|HOPSAN_RELEASE_REVISION|${releaserevision}|g" -i ${manifest}
 sed "s|HOPSAN_DEVELOPMENT_RELEASE|${doDevRelease}|g" -i ${manifest}
 
-grep ${baseversion} ${appdata} 2>&1 > /dev/null
+grep -F ${baseversion} ${appdata} 2>&1 > /dev/null
 if [[ $? -eq 1 ]]; then
     releasetag="\ \ \ \ <release version=\"${baseversion}\" date=\"$releasedate\">\n      <description>\n        <p>See Hopsan-release-notes.txt for the full changelog.</p>\n      </description>\n    </release>"
     sed "/<releases>/a ${releasetag}/" -i ${appdata}
