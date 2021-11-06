@@ -22,7 +22,7 @@
             "disabled": false,
             "buildsystem": "simple",
             "build-commands": [
-                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.19.0 20210510.1936 2.19.0.20210510.1936 false false",
+                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.19.1 20211105.2150 2.19.1.20211105.2150 false false",
 
                 "cd dependencies; ./setupDiscount.sh",
                 "cd dependencies; ./setupFMILibrary.sh",
@@ -47,8 +47,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Hopsan/hopsan.git",
-                    "tag": "v2.19.0",
-                    "commit": "4a9248729bed95a10ea0e58b39893816e816e206"
+                    "tag": "v2.19.1",
+                    "commit": "ace3645dc5a90c6589e521a429d224214ac13935"
                 },
                 {"url": "https://github.com/Orc/discount/archive/v2.2.6.tar.gz", "sha256": "0beb98a66a6e38ed125e2d0a161ff6b461f6a38538bb72498766f376c94a0ad3", "mirror-urls": [], "type": "file", "dest-filename": "discount-v2.2.6.tar.gz", "dest": "dependencies"},
                 {"url": "https://github.com/modelon-community/fmi-library/archive/2.2.tar.gz", "sha256": "e254de026639c455b3289b351801cccdba71b9610a7c9f303e0783fafeee388e", "mirror-urls": [], "type": "file", "dest-filename": "fmilibrary-2.2.tar.gz", "dest": "dependencies"},
