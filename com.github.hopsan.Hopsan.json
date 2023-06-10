@@ -1,7 +1,7 @@
 {
     "app-id": "com.github.hopsan.Hopsan",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-21.08",
+    "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "command": "hopsangui",
     "build-options" : {
@@ -22,9 +22,10 @@
             "disabled": false,
             "buildsystem": "simple",
             "build-commands": [
-                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.20.0 20220711.1354 2.20.0.20220711.1354 false false",
+                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.21.0 20230610.1814 2.21.0.20230610.1814 false false",
 
                 "cd dependencies; ./setupDiscount.sh",
+                "cd dependencies; ./setupFmi4c.sh",
                 "cd dependencies; ./setupFMILibrary.sh",
                 "cd dependencies; ./setupHDF5.sh",
                 "cd dependencies; ./setupKatex.sh",
@@ -47,18 +48,19 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Hopsan/hopsan.git",
-                    "tag": "v2.20.0",
-                    "commit": "1b651af1571d5d16f90f57d0f00a7795ae70341d"
+                    "tag": "v2.21.0",
+                    "commit": "08fff1bca8115e8aa5b0ddaa13e2c24368c5b514"
                 },
-                {"url": "https://github.com/Orc/discount/archive/v2.2.6.tar.gz", "sha256": "0beb98a66a6e38ed125e2d0a161ff6b461f6a38538bb72498766f376c94a0ad3", "mirror-urls": [], "type": "file", "dest-filename": "discount-v2.2.6.tar.gz", "dest": "dependencies"},
-                {"url": "https://github.com/modelon-community/fmi-library/archive/2.2.tar.gz", "sha256": "e254de026639c455b3289b351801cccdba71b9610a7c9f303e0783fafeee388e", "mirror-urls": [], "type": "file", "dest-filename": "fmilibrary-2.2.tar.gz", "dest": "dependencies"},
-                {"url": "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.21/src/CMake-hdf5-1.8.21.tar.gz", "mirror-urls": [], "type": "file", "md5": "46f0bb9366a63f5e9342ab46c436b7fd", "dest-filename": "CMake-hdf5-1.8.21.tar.gz", "dest": "dependencies"},
-                {"url": "https://github.com/KaTeX/KaTeX/releases/download/v0.12.0/katex.tar.gz", "sha256": "9fd44a2e93cb1abb819c258b35c725cba54e5123c8420799b6a40a6a76ccf89e", "mirror-urls": [], "type": "file", "dest-filename": "katex.tar.gz", "dest": "dependencies"},
-                {"url": "https://github.com/msgpack/msgpack-c/releases/download/cpp-3.1.1/msgpack-3.1.1.tar.gz", "sha256": "8592d12e19ac3796889b8358bc8f78df9272e6aa7a9ea1834bafd68e4073549a", "mirror-urls": [], "type": "file", "dest-filename": "msgpack-c-msgpack-3.1.1.tar.gz", "dest": "dependencies"},
-                {"url": "https://sourceforge.net/projects/qwt/files/qwt/6.1.5/qwt-6.1.5.tar.bz2", "mirror-urls": [], "type": "file", "dest-filename": "qwt-6.1.5.tar.bz2", "sha1": "07c71427f1f4bbd0354b3a98965943ce2f220766", "dest": "dependencies"},
-                {"url": "https://downloads.sourceforge.net/project/tclap/tclap-1.2.1.tar.gz", "mirror-urls": [], "type": "file", "dest-filename": "tclap-1.2.1.tar.gz", "sha1": "4f124216dd6e6936f5af6372d921a6c51563f8fd", "dest": "dependencies"},
-                {"url": "https://github.com/zeromq/libzmq/archive/907ec2247556e11661eacf7aa494154576055eb2.zip", "sha256": "bd4ebed45ce4fadfa341f7730237de9cdada04aa1af0a72c0dcf7138ca2f20d6", "mirror-urls": [], "type": "file", "dest-filename": "zeromq-907ec2247556e11661eacf7aa494154576055eb2.zip", "dest": "dependencies"},
-                {"url": "https://github.com/zeromq/cppzmq/archive/v4.6.0.tar.gz", "sha256": "e9203391a0b913576153a2ad22a2dc1479b1ec325beb6c46a3237c669aef5a52", "mirror-urls": [], "type": "file", "dest-filename": "cppzmq-v4.6.0.tar.gz", "dest": "dependencies"},
+                {"type": "file", "sha256": "0beb98a66a6e38ed125e2d0a161ff6b461f6a38538bb72498766f376c94a0ad3", "url": "https://github.com/Orc/discount/archive/v2.2.6.tar.gz", "dest-filename": "discount-v2.2.6.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "e254de026639c455b3289b351801cccdba71b9610a7c9f303e0783fafeee388e", "url": "https://github.com/modelon-community/fmi-library/archive/2.2.tar.gz", "dest-filename": "fmilibrary-2.2.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "md5": "46f0bb9366a63f5e9342ab46c436b7fd", "url": "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.21/src/CMake-hdf5-1.8.21.tar.gz", "dest-filename": "CMake-hdf5-1.8.21.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "9fd44a2e93cb1abb819c258b35c725cba54e5123c8420799b6a40a6a76ccf89e", "url": "https://github.com/KaTeX/KaTeX/releases/download/v0.12.0/katex.tar.gz", "dest-filename": "katex.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "8592d12e19ac3796889b8358bc8f78df9272e6aa7a9ea1834bafd68e4073549a", "url": "https://github.com/msgpack/msgpack-c/releases/download/cpp-3.1.1/msgpack-3.1.1.tar.gz", "dest-filename": "msgpack-c-msgpack-3.1.1.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha1": "07c71427f1f4bbd0354b3a98965943ce2f220766", "url": "https://sourceforge.net/projects/qwt/files/qwt/6.1.5/qwt-6.1.5.tar.bz2", "dest-filename": "qwt-6.1.5.tar.bz2", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha1": "4f124216dd6e6936f5af6372d921a6c51563f8fd", "url": "https://downloads.sourceforge.net/project/tclap/tclap-1.2.1.tar.gz", "dest-filename": "tclap-1.2.1.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "bd4ebed45ce4fadfa341f7730237de9cdada04aa1af0a72c0dcf7138ca2f20d6", "url": "https://github.com/zeromq/libzmq/archive/907ec2247556e11661eacf7aa494154576055eb2.zip", "dest-filename": "zeromq-907ec2247556e11661eacf7aa494154576055eb2.zip", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "e9203391a0b913576153a2ad22a2dc1479b1ec325beb6c46a3237c669aef5a52", "url": "https://github.com/zeromq/cppzmq/archive/v4.6.0.tar.gz", "dest-filename": "cppzmq-v4.6.0.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "05dd5000e4b8e7892b020279e6d5ecedfb9e3f6e38e01a51956f2e0e84570772", "url": "https://github.com/robbr48/fmi4c/archive/e81d407473122cc7ee10209622e38c5d30e34d40.zip", "dest-filename": "fmi4c-e81d407473122cc7ee10209622e38c5d30e34d40.zip", "dest": "dependencies", "mirror-urls": []},
                 {
                     "type": "file",
                     "path": "com.github.hopsan.Hopsan.png"
