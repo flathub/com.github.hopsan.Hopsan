@@ -32,7 +32,6 @@
   <url type="help">https://flumes.iei.liu.se/hopsan/docs/latest/html</url>
 
   <!--FIXME: where to submit translations-->
-  <url type="translate"/>
   <update_contact>https://github.com/Hopsan/hopsan/issues</update_contact>
   <developer_name>Robert Braun and Peter Nordin</developer_name>
   <releases>
