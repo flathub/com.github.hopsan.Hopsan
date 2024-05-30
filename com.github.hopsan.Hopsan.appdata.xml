@@ -26,14 +26,10 @@
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.0"/>
-  <translation/>
   <launchable type="desktop-id">com.github.hopsan.Hopsan.desktop</launchable>
   <url type="homepage">https://liu.se/en/research/hopsan</url>
   <url type="bugtracker">https://github.com/Hopsan/hopsan/issues</url>
   <url type="help">https://flumes.iei.liu.se/hopsan/docs/latest/html</url>
-
-  <!--FIXME: where to donate to the application-->
-  <url type="donation"/>
 
   <!--FIXME: where to submit translations-->
   <url type="translate"/>
