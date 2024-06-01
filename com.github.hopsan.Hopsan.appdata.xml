@@ -26,20 +26,20 @@
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.0"/>
-  <translation/>
   <launchable type="desktop-id">com.github.hopsan.Hopsan.desktop</launchable>
   <url type="homepage">https://liu.se/en/research/hopsan</url>
   <url type="bugtracker">https://github.com/Hopsan/hopsan/issues</url>
   <url type="help">https://flumes.iei.liu.se/hopsan/docs/latest/html</url>
 
-  <!--FIXME: where to donate to the application-->
-  <url type="donation"/>
-
   <!--FIXME: where to submit translations-->
-  <url type="translate"/>
   <update_contact>https://github.com/Hopsan/hopsan/issues</update_contact>
   <developer_name>Robert Braun and Peter Nordin</developer_name>
   <releases>
+    <release date="2024-05-28" version="2.22.0">
+      <description>
+        <p>See Hopsan-release-notes.txt for the full changelog.</p>
+      </description>
+    </release>
     <release date="2023-06-10" version="2.21.0">
       <description>
         <p>See Hopsan-release-notes.txt for the full changelog.</p>
