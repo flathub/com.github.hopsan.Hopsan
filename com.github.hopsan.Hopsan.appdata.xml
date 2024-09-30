@@ -29,7 +29,7 @@
   <launchable type="desktop-id">com.github.hopsan.Hopsan.desktop</launchable>
   <url type="homepage">https://liu.se/en/research/hopsan</url>
   <url type="bugtracker">https://github.com/Hopsan/hopsan/issues</url>
-  <url type="help">https://flumes.iei.liu.se/hopsan/docs/latest/html</url>
+  <url type="help">https://hopsan.github.io/documentation/</url>
 
   <!--FIXME: where to submit translations-->
   <update_contact>https://github.com/Hopsan/hopsan/issues</update_contact>
