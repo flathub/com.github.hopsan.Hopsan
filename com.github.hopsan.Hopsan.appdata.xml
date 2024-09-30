@@ -116,10 +116,4 @@
       </description>
     </release>
   </releases>
-
-  <!--FIXME: where to donate to the application-->
-  <url type="donation"><!-- http://www.homepage.com/donation.html --></url>
-
-  <!--FIXME: where to submit translations-->
-  <url type="translate"><!-- http://www.homepage.com/how-to-submit-translations.html --></url>
 </component>
