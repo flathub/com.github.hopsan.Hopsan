@@ -34,6 +34,9 @@
                 "cd dependencies; ./setupMsgpack.sh",
                 "cd dependencies; ./setupTclap.sh",
                 "cd dependencies; ./setupQwt.sh",
+                "cd dependencies; ./setupXerces.sh",
+                "cd dependencies; ./setupDCPLib.sh",
+                "cd dependencies; ./setupLibzip.sh"
 
                 "qmake HopsanNG.pro",
                 "make -j$(nproc)",
