@@ -35,6 +35,11 @@
   <update_contact>https://github.com/Hopsan/hopsan/issues</update_contact>
   <developer_name>Robert Braun and Peter Nordin</developer_name>
   <releases>
+    <release date="2025-08-18" version="2.23.0">
+      <description>
+        <p>See Hopsan-release-notes.txt for the full changelog.</p>
+      </description>
+    </release>
     <release date="2024-09-26" version="2.22.1">
       <description>
         <p>See Hopsan-release-notes.txt for the full changelog.</p>
@@ -116,4 +121,10 @@
       </description>
     </release>
   </releases>
+
+  <!--FIXME: where to donate to the application-->
+  <url type="donation"/>
+
+  <!--FIXME: where to submit translations-->
+  <url type="translate"/>
 </component>
