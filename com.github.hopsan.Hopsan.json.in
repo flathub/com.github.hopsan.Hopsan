@@ -25,6 +25,7 @@
             "build-commands": [
                 "./packaging/prepareSourceCode.sh $(pwd) $(pwd) HOPSAN_BASE_VERSION HOPSAN_RELEASE_REVISION HOPSAN_FULL_RELEASE_VERSION HOPSAN_DEVELOPMENT_RELEASE false",
 
+                "cd dependencies; ./setupAsio.sh",
                 "cd dependencies; ./setupDiscount.sh",
                 "cd dependencies; ./setupFmi4c.sh",
                 "cd dependencies; ./setupFMILibrary.sh",
