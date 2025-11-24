@@ -29,6 +29,11 @@
                 "CMAKE_ARGS": "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
             }
             "build-commands": [
+                "mkdir -p cmake-wrapper",
+                "cat > cmake-wrapper/cmake << 'EOF'\n#!/bin/sh\nexec /usr/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_POLICY_VERSION=3.5 \"$@\"\nEOF",
+                "chmod +x cmake-wrapper/cmake",
+                "export PATH=\"$PWD/cmake-wrapper:$PATH\""
+                
                 "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.23.1 20251001.1232 2.23.1.20251001.1232 false false",
 
                 "cd dependencies; ./setupAsio.sh",
