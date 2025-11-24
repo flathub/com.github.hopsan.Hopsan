@@ -27,7 +27,7 @@
             ],
             "env": {
                 "CMAKE_ARGS": "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-            }
+            },
             "build-commands": [
                 "mkdir -p cmake-wrapper",
                 "cat > cmake-wrapper/cmake << 'EOF'\n#!/bin/sh\nexec /usr/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_POLICY_VERSION=3.5 \"$@\"\nEOF",
