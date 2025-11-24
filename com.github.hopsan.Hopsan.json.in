@@ -25,6 +25,9 @@
             "config-opts" : [
                 "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
             ],
+            "env": {
+                "CMAKE_ARGS": "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+            }
             "build-commands": [
                 "./packaging/prepareSourceCode.sh $(pwd) $(pwd) HOPSAN_BASE_VERSION HOPSAN_RELEASE_REVISION HOPSAN_FULL_RELEASE_VERSION HOPSAN_DEVELOPMENT_RELEASE false",
 
