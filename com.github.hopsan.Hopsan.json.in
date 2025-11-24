@@ -28,7 +28,6 @@
                 "cd dependencies; ./setupAsio.sh",
                 "cd dependencies; ./setupDiscount.sh",
                 "cd dependencies; ./setupFmi4c.sh",
-                "cd dependencies; ./setupFMILibrary.sh",
                 "cd dependencies; ./setupHDF5.sh",
                 "cd dependencies; ./setupKatex.sh",
                 "cd dependencies; ./setupZeroMQ.sh",
