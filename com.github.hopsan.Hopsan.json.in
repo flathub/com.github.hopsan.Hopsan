@@ -21,19 +21,8 @@
         {
             "name": "hopsan",
             "disabled": false,
-            "buildsystem": "cmake-ninja",
-            "config-opts" : [
-                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-            ],
-            "env": {
-                "CMAKE_ARGS": "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-            },
+            "buildsystem": "simple",
             "build-commands": [
-                "mkdir -p cmake-wrapper",
-                "cat > cmake-wrapper/cmake << 'EOF'\n#!/bin/sh\nexec /usr/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_POLICY_VERSION=3.5 \"$@\"\nEOF",
-                "chmod +x cmake-wrapper/cmake",
-                "export PATH=\"$PWD/cmake-wrapper:$PATH\"",
-                
                 "./packaging/prepareSourceCode.sh $(pwd) $(pwd) HOPSAN_BASE_VERSION HOPSAN_RELEASE_REVISION HOPSAN_FULL_RELEASE_VERSION HOPSAN_DEVELOPMENT_RELEASE false",
 
                 "cd dependencies; ./setupAsio.sh",
