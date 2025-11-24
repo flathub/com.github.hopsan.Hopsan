@@ -23,7 +23,7 @@
             "disabled": false,
             "buildsystem": "simple",
             "config-opts" : [
-                "-DCMAKE_POLICY_VERSION_MINIMUM=3.2"
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
             ],
             "build-commands": [
                 "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.23.1 20251001.1232 2.23.1.20251001.1232 false false",
