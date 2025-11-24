@@ -1,7 +1,7 @@
 {
     "app-id": "com.github.hopsan.Hopsan",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-22.08",
+    "runtime-version": "5.15-25.08",
     "sdk": "org.kde.Sdk",
     "command": "hopsangui",
     "build-options" : {
@@ -22,6 +22,9 @@
             "name": "hopsan",
             "disabled": false,
             "buildsystem": "simple",
+            "config-opts" : [
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.2"
+            ],
             "build-commands": [
                 "./packaging/prepareSourceCode.sh $(pwd) $(pwd) HOPSAN_BASE_VERSION HOPSAN_RELEASE_REVISION HOPSAN_FULL_RELEASE_VERSION HOPSAN_DEVELOPMENT_RELEASE false",
 
