@@ -6,7 +6,7 @@
     "command": "hopsangui",
     "build-options" : {
         "cflags": "-Wno-incompatible-pointer-types",
-        "cxxflags": "-Wno-incompatible-pointer-types"
+        "cxxflags": "-Wno-incompatible-pointer-types",
         "env": {
             "TERM": "xterm"
         }
