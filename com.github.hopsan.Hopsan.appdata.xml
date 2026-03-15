@@ -17,12 +17,15 @@
   <screenshots>
     <screenshot type="default">
       <image type="source">https://github.com/Hopsan/screenshots/raw/master/Screenshot_Hopsan_Workspace_w1600.png</image>
+      <caption>The Hopsan workspace</caption>
     </screenshot>
     <screenshot>
       <image type="source">https://github.com/Hopsan/screenshots/raw/master/Screenshot_Hopsan_PlotAnalysis_w1600.png</image>
+      <caption>Plot tool and analysis of simulation results</caption>
     </screenshot>
     <screenshot>
       <image type="source">https://github.com/Hopsan/screenshots/raw/master/Screenshot_Hopsan_CodeEditor_w1600.png</image>
+      <caption>The built-in component model code editor</caption>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.0"/>
@@ -30,6 +33,7 @@
   <url type="homepage">https://liu.se/en/research/hopsan</url>
   <url type="bugtracker">https://github.com/Hopsan/hopsan/issues</url>
   <url type="help">https://hopsan.github.io/documentation/</url>
+  <url type="vcs-browser">https://github.com/Hopsan/hopsan</url>
   <update_contact>https://github.com/Hopsan/hopsan/issues</update_contact>
   <developer_name>Robert Braun and Peter Nordin</developer_name>
   <releases>
