@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2019 Peter Nordin -->
+<!-- Copyright 2026 Peter Nordin -->
 <component type="desktop-application">
   <id>com.github.hopsan.Hopsan</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -30,11 +30,14 @@
   <url type="homepage">https://liu.se/en/research/hopsan</url>
   <url type="bugtracker">https://github.com/Hopsan/hopsan/issues</url>
   <url type="help">https://hopsan.github.io/documentation/</url>
-
-  <!--FIXME: where to submit translations-->
   <update_contact>https://github.com/Hopsan/hopsan/issues</update_contact>
   <developer_name>Robert Braun and Peter Nordin</developer_name>
   <releases>
+    <release date="2026-03-15" version="2.23.2">
+      <description>
+        <p>Special flathub release with updated third-party libraries and KDE runtime. Unfortunately the built-in component help browser no longer works.</p>
+      </description>
+    </release>
     <release date="2025-10-01" version="2.23.1">
       <description>
         <p>See Hopsan-release-notes.txt for the full changelog.</p>

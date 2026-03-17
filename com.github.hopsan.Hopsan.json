@@ -23,7 +23,7 @@
             "disabled": false,
             "buildsystem": "simple",
             "build-commands": [
-                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.23.1 20251001.1232 2.23.1.20251001.1232 false false",
+                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.23.2 20260317.2128 2.23.2.20260317.2128 false false",
 
                 "cd dependencies; ./setupAsio.sh",
                 "cd dependencies; ./setupDiscount.sh",
@@ -35,8 +35,8 @@
                 "cd dependencies; ./setupTclap.sh",
                 "cd dependencies; ./setupQwt.sh",
                 "cd dependencies; ./setupXerces.sh",
-                "cd dependencies; ./setupDCPLib.sh",
                 "cd dependencies; ./setupLibzip.sh",
+                "cd dependencies; ./setupDCPLib.sh",
 
                 "qmake HopsanNG.pro",
                 "make -j$(nproc)",
@@ -52,20 +52,20 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Hopsan/hopsan.git",
-                    "tag": "v2.23.1",
-                    "commit": "3fe9b31d3df74a81a2b5df8d588bb595f03edc69"
+                    "tag": "v2.23.2-flathub",
+                    "commit": "9ddd74894ffa24ccebed8f096f980ee2a5f9bdd1"
                 },
-                {"type": "file", "sha256": "0beb98a66a6e38ed125e2d0a161ff6b461f6a38538bb72498766f376c94a0ad3", "url": "https://github.com/Orc/discount/archive/v2.2.6.tar.gz", "dest-filename": "discount-v2.2.6.tar.gz", "dest": "dependencies", "mirror-urls": []},
-                {"type": "file", "sha512": "33e0cb76996e24700c0eed710065c0cc955e4b90f47d98a28928d79302b234420b42e7875a71a189f20dc5b1452015901ff9aa03302ee8d2ac43975ac3536674", "url": "https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.21/src/CMake-hdf5-1.8.21.tar.gz", "dest-filename": "CMake-hdf5-1.8.21.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "4ea6cc8782c6508b3051c469ed7a1b6ca20b023c2a0c26ccd9c83bc7e61dfc16", "url": "https://github.com/Orc/discount/archive/refs/tags/v3.0.1.2.tar.gz", "dest-filename": "discount-v3.0.1.2.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "e4defbac30f50d64e1556374aa49e574417c9e72c6b1de7a4ff88c4b1bea6e9b", "url": "https://support.hdfgroup.org/releases/hdf5/v1_14/v1_14_6/downloads/hdf5-1.14.6.tar.gz", "dest-filename": "hdf5-1.14.6.tar.gz", "dest": "dependencies", "mirror-urls": []},
                 {"type": "file", "sha256": "9fd44a2e93cb1abb819c258b35c725cba54e5123c8420799b6a40a6a76ccf89e", "url": "https://github.com/KaTeX/KaTeX/releases/download/v0.12.0/katex.tar.gz", "dest-filename": "katex.tar.gz", "dest": "dependencies", "mirror-urls": []},
                 {"type": "file", "sha256": "8592d12e19ac3796889b8358bc8f78df9272e6aa7a9ea1834bafd68e4073549a", "url": "https://github.com/msgpack/msgpack-c/releases/download/cpp-3.1.1/msgpack-3.1.1.tar.gz", "dest-filename": "msgpack-c-msgpack-3.1.1.tar.gz", "dest": "dependencies", "mirror-urls": []},
-                {"type": "file", "sha512": "0dd1a8278751f0bb26e33ccbf120a20e406109a440d314e4525ce9a2d6f1fc56dccff2dc11c500fe2cfcbd42f4a641e87a231f93f321edc588d9353ffaccbd22", "url": "https://sourceforge.net/projects/qwt/files/qwt/6.1.5/qwt-6.1.5.tar.bz2", "dest-filename": "qwt-6.1.5.tar.bz2", "dest": "dependencies", "mirror-urls": []},
-                {"type": "file", "sha512": "8bd6ee724600880840048c7b36f02d31b1aa4910b17f80fb04aef89b1f1917856d9979ec488edbd457b66d9d689aea97540abb842a8b902bbd75c66a6e07b9b1", "url": "https://downloads.sourceforge.net/project/tclap/tclap-1.2.1.tar.gz", "dest-filename": "tclap-1.2.1.tar.gz", "dest": "dependencies", "mirror-urls": []},
-                {"type": "file", "sha256": "bd4ebed45ce4fadfa341f7730237de9cdada04aa1af0a72c0dcf7138ca2f20d6", "url": "https://github.com/zeromq/libzmq/archive/907ec2247556e11661eacf7aa494154576055eb2.zip", "dest-filename": "zeromq-907ec2247556e11661eacf7aa494154576055eb2.zip", "dest": "dependencies", "mirror-urls": []},
-                {"type": "file", "sha256": "e9203391a0b913576153a2ad22a2dc1479b1ec325beb6c46a3237c669aef5a52", "url": "https://github.com/zeromq/cppzmq/archive/v4.6.0.tar.gz", "dest-filename": "cppzmq-v4.6.0.tar.gz", "dest": "dependencies", "mirror-urls": []},
-                {"type": "file", "sha512": "f35a519cde88824f65bde095c19d69449d0779e75da9e9ebb6a04f4847802213e8730715756a21632c4d27722cd5568ff7878d656ac79165a8bdf8652fbc1bd8", "url": "https://master.dl.sourceforge.net/project/asio/asio/1.12.1%20%28Stable%29/asio-1.12.1.zip", "dest-filename": "asio-1.12.1.zip", "dest": "dependencies", "mirror-urls": []},
-                {"type": "file", "sha256": "3943c18b45f72ab44dd12e6c0310db092573af3001d66e27357d25970855b0e9", "url": "https://github.com/apache/xerces-c/archive/v3.2.2.zip", "dest-filename": "xerces-v3.2.2.zip", "dest": "dependencies", "mirror-urls": []},
-                {"type": "file", "sha256": "242083351e0a568e6ae69ca05f8eb76ed028807bf39cd8fcb4ea58d409ae0f3f", "url": "https://github.com/nih-at/libzip/archive/v1.7.3.zip", "dest-filename": "libzip-v1.7.3.zip", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "dcb085896c28aaec5518cbc08c0ee2b4e60ada7ac929d82639f6189851a6129a", "url": "https://downloads.sourceforge.net/project/qwt/qwt/6.3.0/qwt-6.3.0.tar.bz2", "dest-filename": "qwt-6.3.0.tar.bz2", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "9f9f0fe3719e8a89d79b6ca30cf2d16620fba3db5b9610f9b51dd2cd033deebb", "url": "https://downloads.sourceforge.net/project/tclap/tclap-1.2.1.tar.gz", "dest-filename": "tclap-1.2.1.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "6653ef5910f17954861fe72332e68b03ca6e4d9c7160eb3a8de5a5a913bfab43", "url": "https://github.com/zeromq/libzmq/releases/download/v4.3.5/zeromq-4.3.5.tar.gz", "dest-filename": "zeromq-4.3.5.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "0fff4ff311a7c88fdb76fceefba0e180232d56984f577db371d505e4d4c91afd", "url": "https://github.com/zeromq/cppzmq/archive/refs/tags/v4.11.0.tar.gz", "dest-filename": "cppzmq-v4.11.0.tar.gz", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "fef563b29470c1a2341c81278a514218297c760f862469f9bf83cbffcdb354da", "url": "https://master.dl.sourceforge.net/project/asio/asio/1.12.1%20%28Stable%29/asio-1.12.1.zip", "dest-filename": "asio-1.12.1.zip", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "47b90cc64241d1cf854aa488c9ba7f6a33b27449946246ac50b10e6ce7e366af", "url": "https://github.com/apache/xerces-c/archive/53c0401812bfe5523594c1180f5ac7c758a2eaf7.zip", "dest-filename": "xerces-53c0401812bfe5523594c1180f5ac7c758a2eaf7.zip", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "8a247f57d1e3e6f6d11413b12a6f28a9d388de110adc0ec608d893180ed7097b", "url": "https://github.com/nih-at/libzip/releases/download/v1.11.4/libzip-1.11.4.tar.xz", "dest-filename": "libzip-1.11.4.tar.xz", "dest": "dependencies", "mirror-urls": []},
                 {"type": "file", "sha256": "4acf1115359bb6e8ed351993f27f5ccb7e8f70c208bc33221fb67ab4845f0210", "url": "https://github.com/modelica/DCPLib/archive/refs/tags/v0.2.zip", "dest-filename": "dcplib-v0.2.zip", "dest": "dependencies", "mirror-urls": []},
                 {"type": "file", "sha256": "8b210f8c75bc4c5bbb47f12fc3cef6b92f226392291be19a982753617d5ffc83", "url": "https://github.com/robbr48/fmi4c/archive/refs/tags/v1.1.zip", "dest-filename": "fmi4c-v1.1.zip", "dest": "dependencies", "mirror-urls": []},
                 {

@@ -96,7 +96,7 @@ else
   echo Info: ${baseversion} is already in ${appdata} not adding it again
 fi
 
-appstream-util upgrade ${appdata}
+#appstream-util upgrade ${appdata} # This adds empty donation and translation urls
 appstream-util validate ${appdata}
 
 echo Done preparing ${manifest} and ${appdata}
