@@ -37,6 +37,7 @@
                 "cd dependencies; ./setupXerces.sh",
                 "cd dependencies; ./setupLibzip.sh",
                 "cd dependencies; ./setupDCPLib.sh",
+                "cd dependencies; ./setupSsp4c.sh",
 
                 "qmake HopsanNG.pro",
                 "make -j$(nproc)",
@@ -66,8 +67,9 @@
                 {"type": "file", "sha256": "fef563b29470c1a2341c81278a514218297c760f862469f9bf83cbffcdb354da", "url": "https://master.dl.sourceforge.net/project/asio/asio/1.12.1%20%28Stable%29/asio-1.12.1.zip", "dest-filename": "asio-1.12.1.zip", "dest": "dependencies", "mirror-urls": []},
                 {"type": "file", "sha256": "47b90cc64241d1cf854aa488c9ba7f6a33b27449946246ac50b10e6ce7e366af", "url": "https://github.com/apache/xerces-c/archive/53c0401812bfe5523594c1180f5ac7c758a2eaf7.zip", "dest-filename": "xerces-53c0401812bfe5523594c1180f5ac7c758a2eaf7.zip", "dest": "dependencies", "mirror-urls": []},
                 {"type": "file", "sha256": "8a247f57d1e3e6f6d11413b12a6f28a9d388de110adc0ec608d893180ed7097b", "url": "https://github.com/nih-at/libzip/releases/download/v1.11.4/libzip-1.11.4.tar.xz", "dest-filename": "libzip-1.11.4.tar.xz", "dest": "dependencies", "mirror-urls": []},
-                {"type": "file", "sha256": "4acf1115359bb6e8ed351993f27f5ccb7e8f70c208bc33221fb67ab4845f0210", "url": "https://github.com/modelica/DCPLib/archive/refs/tags/v0.2.zip", "dest-filename": "dcplib-v0.2.zip", "dest": "dependencies", "mirror-urls": []},
-                {"type": "file", "sha256": "8b210f8c75bc4c5bbb47f12fc3cef6b92f226392291be19a982753617d5ffc83", "url": "https://github.com/robbr48/fmi4c/archive/refs/tags/v1.1.zip", "dest-filename": "fmi4c-v1.1.zip", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "553b26515e4dc586b75d0b0c607c99b1e54ea8cda7ab89375c02fd1ee83f2c2d", "url": "https://github.com/modelica/DCPLib/archive/359d16b.zip", "dest-filename": "dcplib-359d16b.zip", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "aa709d0e2c77a499336a9adaf0b118967964a3bd11a666cde00447c47aee35d4", "url": "https://github.com/robbr48/fmi4c/archive/4a77c6a971750be6b70b7d52f7ee492d0f901819.zip", "dest-filename": "fmi4c-4a77c6a971750be6b70b7d52f7ee492d0f901819.zip", "dest": "dependencies", "mirror-urls": []},
+                {"type": "file", "sha256": "a97a4f8d11226151c66f66d94ba2a3c1fb84a2d20d2a6ac24117faf98bbf030f", "url": "https://github.com/peterNordin/ssp4c/archive/72339ea2955a6c44ab058193723b8fc260bfd56e.zip", "dest-filename": "ssp4c-72339ea2955a6c44ab058193723b8fc260bfd56e.zip", "dest": "dependencies", "mirror-urls": []},
                 {
                     "type": "file",
                     "path": "com.github.hopsan.Hopsan.png"
