@@ -37,6 +37,12 @@
   <update_contact>https://github.com/Hopsan/hopsan/issues</update_contact>
   <developer_name>Robert Braun and Peter Nordin</developer_name>
   <releases>
+    <release version="2.24.1" date="2026-06-30">
+      <description>
+        <p>Special flathub release with updated third-party libraries, KDE runtime and a switch to cmake as the build system</p>
+        <p>See Hopsan-release-notes.txt for the full changelog.</p>
+      </description>
+    </release>/
     <release date="2026-03-15" version="2.23.2">
       <description>
         <p>Special flathub release with updated third-party libraries and KDE runtime. Unfortunately the built-in component help browser no longer works.</p>
