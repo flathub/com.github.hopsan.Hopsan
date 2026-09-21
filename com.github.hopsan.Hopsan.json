@@ -23,7 +23,7 @@
             "disabled": false,
             "buildsystem": "simple",
             "build-commands": [
-                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.24.3 20260908.0905 2.24.3.20260908.0905 false false",
+                "./packaging/prepareSourceCode.sh $(pwd) $(pwd) 2.24.4 20260918.1254 2.24.4.20260918.1254 false false",
 
                 "cd dependencies; ./setupAsio.sh",
                 "cd dependencies; ./setupDiscount.sh",
@@ -53,8 +53,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Hopsan/hopsan.git",
-                    "tag": "v2.24.3",
-                    "commit": "91f7718dc591b63952168034763c845dbc9d6dd4"
+                    "tag": "v2.24.4",
+                    "commit": "c7b28310acbfa56732b7ebcb80c68a29ae2c70f3"
                 },
                 {"type": "file", "sha256": "4ea6cc8782c6508b3051c469ed7a1b6ca20b023c2a0c26ccd9c83bc7e61dfc16", "url": "https://github.com/Orc/discount/archive/refs/tags/v3.0.1.2.tar.gz", "dest-filename": "discount-v3.0.1.2.tar.gz", "dest": "dependencies", "mirror-urls": []},
                 {"type": "file", "sha256": "e4defbac30f50d64e1556374aa49e574417c9e72c6b1de7a4ff88c4b1bea6e9b", "url": "https://support.hdfgroup.org/releases/hdf5/v1_14/v1_14_6/downloads/hdf5-1.14.6.tar.gz", "dest-filename": "hdf5-1.14.6.tar.gz", "dest": "dependencies", "mirror-urls": []},
